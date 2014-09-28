@@ -1,8 +1,96 @@
 <!doctype html>
 <html>
   <head>
-    <title>Hello, World!</title>
+    <title>Chat example</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+      }
+
+      .chat {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .users {
+        position: fixed;
+        width: 20%;
+        height: 100%;
+        border-right: 1px solid #e6e6e6;
+        background-color: whitesmoke;
+      }
+
+      .users li {
+        margin-bottom: 10px;
+      }
+
+      .messages {
+        margin-left: 20%;
+        width: 80%;
+        height: 100%;
+      }
+
+      .messages .new {
+        position: fixed;
+        bottom: 0px;
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid #e6e6e6;
+      }
+
+      .messages .new form {
+        width: 80%;
+        height: 100%;
+      }
+
+      .messages .new input {
+        height: 100%;
+        width: 89%;
+        padding-left: 10px;
+      }
+
+      .messages .new button {
+        height: 100%;
+        width: 10%;
+        border-radius: 0;
+        margin: 0;
+      }
+
+      .message .user {
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 15px;
+      }
+
+      .message p {
+        display: inline-block;
+        color: #494949;
+      }
+    </style>
   </head>
   <body>
+    <div class="chat">
+      <div class="users">
+        <ul></ul>
+      </div>
+      <div class="messages">
+        <ul></ul>
+        <div class="new">
+          <form>
+            <input type="text" placeholder="What's up..." />
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/golem.js"></script>
+    <script src="js/chat.js"></script>
   </body>
 </html>
